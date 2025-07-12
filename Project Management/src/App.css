@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+ */
+
+ html, body, #root {
+  height: 100%;
+ }
+
+ .logo-oval{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100px;
+  background-color: #2395ea;
+  border-bottom-right-radius: 100%;
+ }
+
+ .logo-text{
+  position: absolute;
+  top: 15%;
+  left:  20%;
+  margin: 0;
+ }
+
+ .logo-gif-oval{
+  position: relative;
+  height: 100%;  
+  background-color: #2395ea;
+  clip-path: ellipse(100% 100% at 100% 30%);
+ }
+
+.register-btn{
+  width: 20%;
+}
+ 
