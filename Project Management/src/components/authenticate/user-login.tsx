@@ -11,13 +11,22 @@ return(
             <div className="logo-oval">
                 <h2 className="text-white text-center logo-text">LOGO</h2>
             </div>
-            <div className="d-flex flex-column gap-3 w-50 h-50">
-                <h1>WELCOME</h1>
-                <input type="text"/>
-                <input type="text"/>
-                <button className="border-0 ml-auto">Forget Password?</button>
-                <button className="btn btn-primary">Sign in</button>
+            <div className="h-100 d-flex align-items-center w-100">
+                <div className="d-flex flex-column gap-3 w-50 m-auto">
+                    <h1>WELCOME</h1>
+                    <div className="input-wrapper">
+                        <i className="fa fa-user"/>
+                        <input type="text" placeholder="Username"/>
+                    </div>
+                     <div className="input-wrapper">
+                        <i className="fa fa-unlock-alt"/>
+                        <input type="text" placeholder="Password"/>
+                    </div>
+                    <button className="border-0 ml-auto">Forget Password?</button>
+                    <button className="btn btn-primary">Sign in</button>
+                 </div>
             </div>
+            
         </div>
         <div className="w-50">
             <div className="logo-gif-oval position-relative">
