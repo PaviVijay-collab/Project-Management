@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import programmerLogo from '../../assets/undraw_programming_65t2.svg'
 
 const UserLogin = () => {
 
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordShow, setPasswordShow] = useState(false);
+
+    const onSubmit = () => {
+        console.log(userName);
+        console.log(password);
+    }
 
 return(
     <>
@@ -15,15 +23,16 @@ return(
                 <div className="d-flex flex-column gap-3 w-50 m-auto">
                     <h1>WELCOME</h1>
                     <div className="input-wrapper">
-                        <i className="fa fa-user"/>
-                        <input type="text" placeholder="Username"/>
+                        <i className="fa fa-user start-icon"/>
+                        <input type="text" placeholder="Username" value={userName} onChange={(e) => setUserName(e.target.value)}/>
                     </div>
                      <div className="input-wrapper">
-                        <i className="fa fa-unlock-alt"/>
-                        <input type="text" placeholder="Password"/>
+                        <i className="fa fa-unlock-alt start-icon"/>
+                        <input type={passwordShow ? "text" : 'password'}  placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <i className={`fa ${passwordShow ? "fa-eye-slash": "fa-eye"} end-icon`} onClick={() => setPasswordShow(!passwordShow)}/> 
                     </div>
                     <button className="border-0 ml-auto">Forget Password?</button>
-                    <button className="btn btn-primary">Sign in</button>
+                    <button className="btn btn-primary" onClick={onSubmit}>Sign in</button>
                  </div>
             </div>
             
