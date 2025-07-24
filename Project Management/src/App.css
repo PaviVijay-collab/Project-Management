@@ -112,4 +112,9 @@ input::-ms-clear {
   display: none;
 }
 
+@media (max-width: 992px) {
+    .sidelogo-none {
+        display: none ;
+    }
+}
 
